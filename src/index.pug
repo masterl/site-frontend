@@ -9,6 +9,12 @@ html(lang='en')
   body
 
     #app
-      router-view
+      header
+      .app-main
+        .app-navigation
+          base-side-menu
+        section.content
+          router-view
+      footer
 
     script(src="js/bundle.js")
