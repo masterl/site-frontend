@@ -22,7 +22,7 @@ for (const { name, config } of non_base_components) {
 Vue.use(VueRouter);
 
 const routes = [
-  { path: '/', component: components['login-form'] }
+  { path: '/', component: components.home }
 ];
 
 const router = new VueRouter({ routes });
