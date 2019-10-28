@@ -39,8 +39,9 @@ function compile_app_bundle () {
       },
       resolve: {
         alias: {
-          vue: 'vue/dist/vue.esm.js',
-          app:      path.join(src_dir, 'app')
+          vue:          'vue/dist/vue.esm.js',
+          'vue-router': 'vue-router/dist/vue-router.esm.js',
+          app:          path.join(src_dir, 'app')
         }
       }
     }))

@@ -9,15 +9,15 @@ console.log('hello');
 
 load_base_components();
 
-const non_base = list_non_base_components();
+const non_base_components = list_non_base_components();
 
-console.log(non_base);
-
-const { name, config } = non_base[0];
+// console.log(non_base);
 
 const components = {};
 
-components[name] = config;
+for (const { name, config } of non_base_components) {
+  components[name] = config;
+}
 
 Vue.use(VueRouter);
 
@@ -29,6 +29,5 @@ const router = new VueRouter({ routes });
 
 export const vue = new Vue({
   el:   '#app',
-  components,
   router
 });

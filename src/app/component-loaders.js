@@ -1,6 +1,4 @@
 import Vue from 'vue';
-import upperFirst from 'lodash.upperfirst';
-import camelCase from 'lodash.camelcase';
 
 const filename_from_path = filepath => {
   return filepath
@@ -34,16 +32,13 @@ export function load_base_components () {
   const require_component = require.context(
     '../components/BaseComponents', // The relative path of the components folder
     true, // check subfolders?
-    /Base\w+\.js$/ // Filename regular expresion
+    /base[\w-]+\.js$/ // Filename regular expresion
   );
 
   require_component.keys().forEach(file_name => {
     const component_config = require_component(file_name);
 
-    const component_name = upperFirst(
-      camelCase(
-        filename_from_path(file_name)
-      ));
+    const component_name = filename_from_path(file_name);
 
     Vue.component(
       component_name,

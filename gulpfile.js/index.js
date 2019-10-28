@@ -36,7 +36,7 @@ function default_task (cb) {
 
 function startdev () {
   watch('src/index.pug', compile.index);
-  watch('src/stylus/**/*.styl', compile.stylus);
+  watch(['src/stylus/**/*.styl', 'src/components/**/*.styl'], compile.stylus);
   watch(['src/components/**/*.pug', 'src/**/*.js'], compile['app-bundle']);
 }
 
