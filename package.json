@@ -47,7 +47,7 @@
     "lodash.camelcase": "^4.3.0",
     "lodash.upperfirst": "^4.3.1",
     "normalize.css": "^8.0.1",
-    "pug": "^2.0.4",
+    "pug": "^3.0.1",
     "pug-loader": "^2.4.0",
     "vue": "^2.6.10",
     "vue-router": "^3.1.3",
